@@ -81,6 +81,9 @@ https://tensorboard.dev/   for tensorboard
 #**For basics of FEDRATED LEARNING**
 https://github.com/lmoroney/dlaicourse/blob/master/TensorFlow%20Deployment/Course%204%20-%20TensorFlow%20Serving/Week%204/Examples/Custom_Federated_Algorithms%2C_Part_1_Introduction_to_the_Federated_Core.ipynb
 
+
+https://ai.googleblog.com/2017/04/federated-learning-collaborative.html?m=1
+
 # HOW FEDRATED LEARNING WORKS?
 Fedrated learning means to use user data to train model locally on user device without the need of data to leave the user's device. hence, maintaining privacy.
 
