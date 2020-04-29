@@ -1,5 +1,5 @@
 
-# Starting with basics of TFServing
+# Basics of TFServing
 
 # STEP 1: GET IMPORTS AND CREATE A MODEL
 It can use any dataset either custom made or from keras.datasets.NAME_OF_DATASET.
@@ -36,6 +36,49 @@ data = json.dumps({"signature_name": "serving_default", "instances": test_images
 
 # STEP 7: REST REQUEST FOR INFERENCE
 Get inference using http request that loads json response.
+
+# Basics of TFHub
+
+# STEP 1: IMPORT TENSORFLOW HUB AS HUB
+
+# STEP 2: GET DATASET
+Either custom or using tfds i.e tensorflow datasets
+
+# STEP 3: TRAIN , VALIDATION AND TEST SPLIT
+* Load dataset using tfds.load() then split.
+* Best way using split = tfds.SPLIT.TEST
+
+# STEP 4: BATCH THE TEST DATA
+dataset_tr = self.train_dataset.shuffle(self._buffer_size).batch(self._batch_size)
+
+# STEP 5: SAVE AND TRAIN MODEL
+tf.saved_model.save(self._model, self._export_path) and model.compile() + model.fit()
+
+# STEP 6: CREATE A TARBALL
+The export_model method saved our model in the TensorFlow SavedModel format in the ./saved_model directory. The SavedModel format saves our model and its weights in various files and directories. This makes it difficult to distribute our model. Therefore, it is convenient to create a single compressed file that contains all the files and folders of our model. To do this, we will use the tar archiving program to create a tarball (similar to a Zip file) that contains our SavedModel.
+
+!tar -cz -f module.tar.gz -C ./saved_model .
+
+# STEP 7: MODULE HANDLE
+1. For TEXT EMBEDDINGS : "https://tfhub.dev/google/tf2-preview/gnews-swivel-20dim/1"
+
+2. For Images: MODULE_HANDLE ="https://tfhub.dev/google/tf2-preview/{}/feature_vector/4".format(handle_base)
+
+# STEP 8: FEATURE EXTRACTOR
+feature_extractor = hub.KerasLayer(MODULE_HANDLE)   OR put this in tf.keras.Sequential().
+
+# STEP 9: EVALUATE ON TEST DATA
+
+**important link**
+
+https://tfhub.dev/
+
+https://www.tensorflow.org/tfx/guide/serving
+
+
+
+
+
 
 
 
