@@ -1,6 +1,4 @@
 # THIS REPOSITORY CONTAINS EXAMPLES FOR WORKING WITH TFSERVING, TFHUB, TENSORBOARD & FEDRATED LEARNING.
-**For basics of FEDRATED LEARNING**
-https://github.com/lmoroney/dlaicourse/blob/master/TensorFlow%20Deployment/Course%204%20-%20TensorFlow%20Serving/Week%204/Examples/Custom_Federated_Algorithms%2C_Part_1_Introduction_to_the_Federated_Core.ipynb
 
 # Basics of TFServing
 
@@ -80,7 +78,20 @@ https://www.tensorflow.org/tfx/guide/serving
 
 https://tensorboard.dev/   for tensorboard
 
+#**For basics of FEDRATED LEARNING**
+https://github.com/lmoroney/dlaicourse/blob/master/TensorFlow%20Deployment/Course%204%20-%20TensorFlow%20Serving/Week%204/Examples/Custom_Federated_Algorithms%2C_Part_1_Introduction_to_the_Federated_Core.ipynb
 
+# HOW FEDRATED LEARNING WORKS?
+Fedrated learning means to use user data to train model locally on user device without the need of data to leave the user's device. hence, maintaining privacy.
+
+**How this is achieved?**
+1. Pick subset of available devices having your app installed.
+2. These will recieve training model and retrain the model on device.
+3. Then return results of training, not data used for training, to server to retrain the master model.
+4. training model gets deletd from the device and server.
+5. same approach is used for testing newly trained master model.
+6. Server broadcasts data to devices usually datastructures which are trained and whose result is aggregated from numerous devices before a single result is recieved at the server.
+**Focused Collection**
 
 
 
