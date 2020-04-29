@@ -75,6 +75,8 @@ https://tfhub.dev/
 
 https://www.tensorflow.org/tfx/guide/serving
 
+https://tensorboard.dev/   for tensorboard
+
 
 
 
