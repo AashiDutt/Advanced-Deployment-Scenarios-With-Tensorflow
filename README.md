@@ -1,5 +1,6 @@
-# THIS REPOSITORY CONTAINS EXAMPLES FOR WORKING WITH TFSERVING, TFHUB AND TENSORBOARD.
-
+# THIS REPOSITORY CONTAINS EXAMPLES FOR WORKING WITH TFSERVING, TFHUB, TENSORBOARD & FEDRATED LEARNING.
+**For basics of FEDRATED LEARNING**
+https://github.com/lmoroney/dlaicourse/blob/master/TensorFlow%20Deployment/Course%204%20-%20TensorFlow%20Serving/Week%204/Examples/Custom_Federated_Algorithms%2C_Part_1_Introduction_to_the_Federated_Core.ipynb
 
 # Basics of TFServing
 
